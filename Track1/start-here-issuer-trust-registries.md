@@ -50,7 +50,7 @@ Put simply: a government issuer is listed and made discoverable through the regi
 
 Here's the basic loop as it stands today. Where a step doesn't match how issuers and relying parties actually work, that's exactly the gap we want to find and fix together.
 
-1. **Establish recognition.** An issuer’s identity, authority, and permitted scope are recorded by or made discoverable through an accountable source.  
+1. **Establish authorization.** An issuer’s identity, authority, and permitted scope are recorded by or made discoverable through an accountable source.  
 2. **Maintain currency.** The relevant information is updated as the issuer, its scope, or its technical signals change.  
 3. **Make trust information available.** Relying parties can obtain the information through an appropriate discovery, synchronization, or referral mechanism.  
 4. **Use it in a trust decision.** A relying party evaluates the information under its own policies and transaction context.  
