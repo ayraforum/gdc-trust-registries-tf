@@ -33,7 +33,7 @@ Working definitions for the terms the scope depends on. These are starting point
 - **Verifiable digital credential (hereafter, credential).** A digitally signed set of claims made by an issuer about a subject, whose signature, issuer, and status can be checked.
 - **Issuer.** The entity that signs and issues a credential.
 - **Authority.** The entity whose mandate — established in law, regulation, or delegation, never by a registry — makes an issuer's credentials meaningful.
-- **Trust registry.** A governed, discoverable source where anyone with a stake in a credential can check whether an issuer is recognized, for what, and whether that answer is current — and which other registries this registry recognizes.
+- **Trust registry.** An authoritative source of governed information about which entities are authorized to perform which actions with respect to which resources under a governance framework.
 - **Relying party.** Anyone who must decide whether to accept a credential. The trust decision is always theirs; a registry informs it, never makes it.
 - **Recognized vs. vetted.** A sovereign issuer is recorded, not approved: recognized. A delegated issuer may be assessed by a registrar under published rules: vetted. The same registry data may support both, but the governance meaning is not the same.
 
@@ -47,6 +47,12 @@ An authority has at least three options for exposing its trust information, and 
 
 Delegated issuers follow a different path: a registrar may assess evidence and approve or reject participation under published rules. That vetted path can share registry data with the recognized paths above, but the two must never be confused.
 
+## Governance Meaning and Availability
+
+A trust registry gives governed information a defined meaning and an accountable source. Its governance establishes what assertions the registry makes, the entities, actions, and resources to which they apply, their provenance, and how their currency can be determined.
+
+That governance meaning is independent of any single availability pattern. Governed information may be published, synchronized, resolved when needed, obtained through referral, or made available through a combination of approaches. A governance framework may permit one or more of these patterns without requiring every implementation to support all of them.
+
 ## Core Model
 
 A trust registry does not create an issuer's authority. It also does not create the signing keys, identifiers, endpoints, or status services behind a credential. Those remain under the issuer's control. The registry makes the relevant parts discoverable and keeps them usable for people who need to rely on a credential.
@@ -57,10 +63,10 @@ The basic loop has four parts:
 
 1. **Get in.** An issuer is recognized in the registry. For a government, that means declaring what it issues, while its signing keys or other trust signals are listed or made discoverable. Recorded, not approved.
 2. **Stay current.** The registry keeps the issuer's information current, including whether the issuer, key, credential type, or status service is active, suspended, revoked, expired, or otherwise no longer usable.
-3. **Check.** Before making the trust decision, a relying party can confirm that the issuer is recognized, the credential or claim is in scope, the technical signal belongs to that issuer, and the answer is current.
-4. **Find the right registry.** The relying party needs a dependable signal for which registry or authority source to check in the first place.
+3. **Check.** Before making the trust decision, a relying party can use current trust information to confirm that the issuer is recognized, the credential or claim is in scope, and the technical signal belongs to that issuer. The information may have been obtained in advance or in the context of the transaction.
+4. **Obtain the relevant trust information.** The relying party needs a dependable way to identify the appropriate registry or authority source. Depending on the ecosystem, that information may be obtained or synchronized in advance, indicated by the credential or transaction context, or discovered through another trusted source.
 
-This is the same pattern people already know from trust lists such as ICAO PKD. The v0.1 work is about making the pattern clear enough to test across government-issued identity credentials, not about solving every registry model at once.
+Trust lists such as the ICAO Public Key Directory provide one established implementation of this underlying trust pattern. The v0.1 work is about making the pattern clear enough to test across government-issued identity credentials, not about solving every registry model at once.
 
 ## Sovereignty Boundary
 
@@ -102,7 +108,7 @@ The things to make visible:
 - Whether a registrar or assessor is involved.
 - How entries are added, updated, suspended, revoked, or removed.
 - How issuer-controlled technical signals are recorded, referenced, or verified.
-- How relying parties discover the registry and read its answer.
+- How relying parties identify the relevant registry or authority source, obtain its information, and assess the provenance and currency of the answer — including where information is synchronized or cached.
 
 For sovereign-operated or sovereign-designated registries, the governance answer may simply be the sovereign and its law. For industry, professional, commercial, or delegated registries, the governance evidence may need to be more explicit.
 
@@ -115,8 +121,8 @@ This is the small set of questions the v0.1 paper exists to work through togethe
 3. **What happens when a check fails.** *Starting point:* agree baseline handling for a few clear failures, such as unknown issuer, suspended issuer, or credential out of scope. *Still open:* which failures should mean refusal, a warning, cached reliance, or an ecosystem-specific policy call?
 4. **Freshness and outages.** *Starting point:* the ecosystem sets the freshness requirement, with cached data allowed within limits when a registry is briefly unavailable. *Still open:* how current must issuer, credential, claim, key, endpoint, and status-service information be for real border, travel, and relying-party workflows?
 5. **How precisely authority is scoped.** *Starting point:* express authority by credential type, by claim, and by jurisdiction. *Still open:* is that enough for v0.1, or does the first version also need schemas, assurance levels, subject populations, technical signals, and registry discovery signals?
+6. **How trust information is made available.** *Starting point:* the framework defines the meaning, provenance, and currency of trust information without requiring one retrieval pattern. *Still open:* what governance properties must remain consistent when that information is preloaded, synchronized, resolved during a transaction, supplied through referral, or cached during an outage?
 
 ## What Is Deferred
 
 This v0.1 paper stays small on purpose. Detailed evidence lists, candidate status values, failure behavior, discovery inputs, claim-scope examples, data-model notes, and the longer open-question list live in [Issuer Trust Registry Operational Detail](https://github.com/ayraforum/gdc-trtf-onboarding-and-governance/blob/main/later-phases/issuer-trust-registry-operational-detail.md).
-

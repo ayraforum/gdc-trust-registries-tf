@@ -4,9 +4,15 @@ Status: Working draft for GDC Trust Registry Task Force discussion
 
 Part of the Global Digital Collaboration Trust Registry Task Force. This is the track's defining document: the scope below sets the boundaries, and everything else — starting with the [Issuer Onboarding & Governance Framework v0.1](issuer-onboarding-and-governance-v0.1.md) — is worked within them.
 
+[GDC Trust Registry Task Force Project Charter](https://docs.google.com/document/d/1Ck5c-0HVVoSIpgO95Ib_D9rJP6Kbaz8CAiKmPDZ30j8/edit?tab=t.0)
+
 ## Scope
 
 This work is scoped to two sides of the same exchange: **what can an authority do to expose its trust information digitally**, and **what are its options for doing so?** And on the other side: **how do relying parties use that information to make their own trust decisions?**
+
+The initial technical use case is deliberately narrow: a relying party may want to obtain a known list of all relevant issuers before requesting a credential. The governance framework must support that case without being defined by it. It should establish how trust registries anchor issuer authority and support trust-information discovery both **before a transaction** (for example, obtaining or caching a list of recognized issuers) and **during a transaction** (for example, checking an issuer, its scope of authority, and the currency of that information when a credential is presented).
+
+Issuer registration is the initial focus. The framework should describe how issuers can be recognized or vetted, entered into a trust registry, and made discoverable without implying that every registry uses the same onboarding model. This focus does not assume that issuers are the only actors a trust registry may register. Relying parties and other ecosystem participants may also be registered under future or ecosystem-specific governance; v0.1 should neither define those processes nor preclude them.
 
 We are not designing new authorities, new governance bodies, or new vetting processes. The authority already exists — in legislation, regulation, or delegation. The work is limited to how that existing authority makes itself, and the issuers it recognizes, discoverable and checkable in digital form.
 
@@ -46,6 +52,7 @@ Establishing a "Shared Vocabulary"; drafting the Requirements & Scope Document; 
 - Finalize this scope statement with the co-leads, confirming what is explicitly in and out of scope for the September deliverable.
 - Build the shared vocabulary for the terms the scope depends on: verifiable digital credential, issuer, authority, trust registry, relying party, and recognized vs. vetted. Working definitions are seeded in the framework's [Shared Vocabulary](issuer-onboarding-and-governance-v0.1.md#shared-vocabulary) section.
 - Define the two relying-party questions precisely as policy elements: what "authoritative for a kind of credential" means (type, claims, jurisdiction, currency), and what it means for one registry to recognize another.
+- Describe how the same governed trust information supports discovery before a transaction — including obtaining a known issuer list — or checks during a transaction, without prescribing the technical query mechanism.
 - Develop the taxonomy of authority exposure options: operate a registry, participate in a shared registry service, or point to a basis of authority.
 - Apply the scope test to incoming proposals so the September deliverable stays focused on the pattern, proven through the personal identity credential examples — while parallel work in other domains continues against the same pattern.
 
@@ -54,13 +61,14 @@ Out of scope (noted, not ours to define):
 - **Wire formats, protocols, and data models** for asking and answering the two relying-party questions. We define what the questions mean as policy; how they are asked and answered technically belongs to the technical track.
 - **A universal taxonomy of credential types or issuers.** The shared vocabulary covers only the terms the scope depends on; cataloguing every credential domain is someone else's encyclopedia.
 - **Assurance-level rankings or comparisons across authorities.** Which authorities a relying party honors, and at what assurance, is its own policy call — ranking sovereigns would cross the sovereignty boundary.
-- **Wallet governance and relying-party/verifier registration policy.** Both are real (wallets act as policy enforcement points; cross-border verifier registration is a known blocker) — noted and parked in [Later Phases](https://github.com/ayraforum/gdc-trtf-onboarding-and-governance/blob/main/later-phases/README.md).
+- **Wallet governance and relying-party/verifier registration policy.** Both are real (wallets act as policy enforcement points; cross-border verifier registration is a known blocker) — noted and parked in [Later Phases](https://github.com/ayraforum/gdc-trtf-onboarding-and-governance/blob/main/later-phases/README.md). The issuer-first scope does not preclude trust registries from registering relying parties or other ecosystem actors; it only defers defining their governance and onboarding requirements.
 
 ### Onboarding & Governance
 
 Defines principles for issuer onboarding and governance through recognized trust registries, including issuer authority, credential scope, status, conformance evidence, and privacy/security models that support jurisdictional accountability and cross-ecosystem reliance.
 
 - Describe the onboarding path for each authority option — a sovereign lighting up its own registry, or participating in a shared service such as AAMVA, ICAO PKD, or the EU Trust Lists — keeping sovereign recognition (recorded, not approved) distinct from registrar-vetted onboarding for delegated issuers.
+- Define the minimum governance expectations that allow issuers to be registered and their information to remain discoverable and current, while leaving non-issuer registration models open for later work.
 - Work the pattern through the three concrete examples — driver's license, national ID card, passport — including how a credential signals which trust registry it is anchored to.
 
 Out of scope (noted, not ours to define):
