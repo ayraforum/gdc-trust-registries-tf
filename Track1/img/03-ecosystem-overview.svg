@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="620" viewBox="0 0 1800 620" role="img" aria-labelledby="title desc">
+  <title id="title">Trust registry ecosystem overview</title>
+  <desc id="desc">An issuer and a trust registry recognized for a defined scope record and maintain governed information in a central trust registry. A relying party and wallet query the central trust registry.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#073642"/>
+    </marker>
+    <style>
+      .box { fill: #eaf2fb; stroke: #073642; stroke-width: 3; }
+      .central { fill: #dbe9f7; }
+      .connector { fill: none; stroke: #073642; stroke-width: 3; marker-end: url(#arrow); }
+      .node-label { fill: #073642; font: 600 34px Poppins, "Segoe UI", Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .central-label { font-size: 42px; }
+      .recognized-label { font-size: 30px; }
+      .node-sublabel { fill: #244b56; font: 400 22px Poppins, "Segoe UI", Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .flow-label { fill: #244b56; font: italic 500 26px Poppins, "Segoe UI", Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="620" fill="#ffffff"/>
+
+  <rect class="box" x="50" y="70" width="350" height="180" rx="14"/>
+  <text class="node-label" x="225" y="160">Issuer</text>
+
+  <rect class="box" x="50" y="370" width="350" height="180" rx="14"/>
+  <text class="node-label recognized-label" x="225" y="416">
+    <tspan x="225" dy="0">Recognized</tspan>
+    <tspan x="225" dy="38">Trust Registry</tspan>
+  </text>
+  <text class="node-sublabel" x="225" y="500">for a defined scope</text>
+
+  <rect class="box central" x="650" y="160" width="500" height="300" rx="18"/>
+  <text class="node-label central-label" x="900" y="310">Trust Registry</text>
+
+  <rect class="box" x="1400" y="70" width="350" height="180" rx="14"/>
+  <text class="node-label" x="1575" y="160">Relying Party</text>
+
+  <rect class="box" x="1400" y="370" width="350" height="180" rx="14"/>
+  <text class="node-label" x="1575" y="460">Wallet</text>
+
+  <path class="connector" d="M 400 160 L 638 245"/>
+  <path class="connector" d="M 400 460 L 638 375"/>
+
+  <path class="connector" d="M 1400 160 L 1162 245"/>
+  <path class="connector" d="M 1400 460 L 1162 375"/>
+
+  <text class="flow-label" x="525" y="295">
+    <tspan x="525" dy="0">Record &amp;</tspan>
+    <tspan x="525" dy="34">Maintain</tspan>
+  </text>
+
+  <text class="flow-label" x="1275" y="312">Query</text>
+</svg>

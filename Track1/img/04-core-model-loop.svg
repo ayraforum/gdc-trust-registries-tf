@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1220" viewBox="0 0 1800 1220" role="img" aria-labelledby="title desc">
+  <title id="title">Core model trust information loop</title>
+  <desc id="desc">A clockwise four-stage loop moves from Get in, to Stay current, to Check, to Obtain. A trust registry at the centre records, surfaces, and maintains evidence while authority and verification material remain with the issuer and the relying party makes the trust decision. Every use asks whether the issuer is authoritative and whether the registry recognizes other registries.</desc>
+
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#073642" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 13 6.5 L 0 13 z" fill="#073642"/>
+    </marker>
+    <style>
+      .eyebrow { fill: #1d70b8; font: 700 24px Poppins, "Segoe UI", Arial, sans-serif; letter-spacing: 3px; text-anchor: middle; }
+      .headline { fill: #073642; font: 600 38px Poppins, "Segoe UI", Arial, sans-serif; text-anchor: middle; }
+      .connector { fill: none; stroke: #073642; stroke-width: 5; stroke-linecap: round; marker-end: url(#arrow); }
+      .card { stroke-width: 3; filter: url(#shadow); }
+      .step { fill: #ffffff; font: 700 24px Poppins, "Segoe UI", Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .card-title { fill: #073642; font: 650 35px Poppins, "Segoe UI", Arial, sans-serif; }
+      .card-body { fill: #244b56; font: 400 23px Poppins, "Segoe UI", Arial, sans-serif; }
+      .centre-kicker { fill: #1d70b8; font: 700 21px Poppins, "Segoe UI", Arial, sans-serif; letter-spacing: 2.5px; text-anchor: middle; }
+      .centre-title { fill: #073642; font: 650 32px Poppins, "Segoe UI", Arial, sans-serif; text-anchor: middle; }
+      .centre-body { fill: #244b56; font: 400 23px Poppins, "Segoe UI", Arial, sans-serif; text-anchor: middle; }
+      .centre-emphasis { fill: #073642; font: 650 23px Poppins, "Segoe UI", Arial, sans-serif; text-anchor: middle; }
+      .question-label { fill: #1d70b8; font: 700 20px Poppins, "Segoe UI", Arial, sans-serif; letter-spacing: 2px; }
+      .question { fill: #073642; font: 550 25px Poppins, "Segoe UI", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1220" fill="#fbfdff"/>
+
+  <text class="eyebrow" x="900" y="52">CORE MODEL</text>
+  <text class="headline" x="900" y="104">Trust information stays useful through a governed loop</text>
+
+  <!-- Clockwise connectors -->
+  <path class="connector" d="M 574 292 L 1216 292"/>
+  <path class="connector" d="M 1445 422 L 1445 638"/>
+  <path class="connector" d="M 1226 768 L 584 768"/>
+  <path class="connector" d="M 355 638 L 355 422"/>
+
+  <!-- 1. Get in -->
+  <rect class="card" x="130" y="172" width="450" height="250" rx="22" fill="#eaf3fc" stroke="#1d70b8"/>
+  <circle cx="191" cy="230" r="31" fill="#1d70b8"/>
+  <text class="step" x="191" y="231">1</text>
+  <text class="card-title" x="240" y="241">Get in</text>
+  <text class="card-body" x="177" y="294">
+    <tspan x="177" dy="0">Issuer and scope are listed.</tspan>
+    <tspan x="177" dy="34">Trust signals are listed or</tspan>
+    <tspan x="177" dy="34">made discoverable.</tspan>
+    <tspan x="177" dy="38" font-weight="650" fill="#073642">Recorded, not approved.</tspan>
+  </text>
+
+  <!-- 2. Stay current -->
+  <rect class="card" x="1220" y="172" width="450" height="250" rx="22" fill="#e8f6f3" stroke="#007f73"/>
+  <circle cx="1281" cy="230" r="31" fill="#007f73"/>
+  <text class="step" x="1281" y="231">2</text>
+  <text class="card-title" x="1330" y="241">Stay current</text>
+  <text class="card-body" x="1267" y="294">
+    <tspan x="1267" dy="0">Issuer, credential type, key,</tspan>
+    <tspan x="1267" dy="34">and status-service state stay</tspan>
+    <tspan x="1267" dy="34">current and usable.</tspan>
+  </text>
+
+  <!-- 3. Check -->
+  <rect class="card" x="1220" y="638" width="450" height="260" rx="22" fill="#fff3e4" stroke="#a85d00"/>
+  <circle cx="1281" cy="696" r="31" fill="#a85d00"/>
+  <text class="step" x="1281" y="697">3</text>
+  <text class="card-title" x="1330" y="707">Check</text>
+  <text class="card-body" x="1267" y="760">
+    <tspan x="1267" dy="0">Relying party confirms</tspan>
+    <tspan x="1267" dy="34">authority, scope, currency,</tspan>
+    <tspan x="1267" dy="34">and linkage to the issuer.</tspan>
+  </text>
+
+  <!-- 4. Obtain -->
+  <rect class="card" x="130" y="638" width="450" height="260" rx="22" fill="#f0edfb" stroke="#6554c0"/>
+  <circle cx="191" cy="696" r="31" fill="#6554c0"/>
+  <text class="step" x="191" y="697">4</text>
+  <text class="card-title" x="240" y="707">Obtain</text>
+  <text class="card-body" x="177" y="760">
+    <tspan x="177" dy="0">Trust information is preloaded,</tspan>
+    <tspan x="177" dy="34">synchronized, signalled, or</tspan>
+    <tspan x="177" dy="34">discovered from a trusted source.</tspan>
+  </text>
+
+  <!-- Centre: responsibility boundary -->
+  <rect x="620" y="330" width="560" height="400" rx="30" fill="#ffffff" stroke="#b9ced9" stroke-width="3" filter="url(#shadow)"/>
+  <text class="centre-kicker" x="900" y="388">TRUST REGISTRY</text>
+  <text class="centre-title" x="900" y="438">records · surfaces · maintains</text>
+  <line x1="690" y1="474" x2="1110" y2="474" stroke="#d5e2e8" stroke-width="2"/>
+  <text class="centre-body" x="900" y="520">
+    <tspan x="900" dy="0">Authority and verification material</tspan>
+    <tspan x="900" dy="34">remain with the issuer.</tspan>
+  </text>
+  <rect x="660" y="592" width="480" height="68" rx="34" fill="#eaf3fc"/>
+  <text class="centre-emphasis" x="900" y="635">Evidence, not acceptance rules</text>
+  <text class="centre-body" x="900" y="696">The relying party decides.</text>
+
+  <!-- Questions beneath every use -->
+  <text class="eyebrow" x="900" y="970">EVERY USE ASKS</text>
+
+  <rect x="130" y="1005" width="750" height="155" rx="20" fill="#ffffff" stroke="#b9ced9" stroke-width="3"/>
+  <text class="question-label" x="175" y="1052">AUTHORITY</text>
+  <text class="question" x="175" y="1094">
+    <tspan x="175" dy="0">Is this issuer authoritative for this credential—</tspan>
+    <tspan x="175" dy="34">in this jurisdiction—right now?</tspan>
+  </text>
+
+  <rect x="920" y="1005" width="750" height="155" rx="20" fill="#ffffff" stroke="#b9ced9" stroke-width="3"/>
+  <text class="question-label" x="965" y="1052">RECOGNITION</text>
+  <text class="question" x="965" y="1094">
+    <tspan x="965" dy="0">Does this registry recognize another registry for</tspan>
+    <tspan x="965" dy="34">questions outside its own scope?</tspan>
+  </text>
+</svg>

@@ -1,5 +1,7 @@
 # Issuer Onboarding & Governance Framework v0.1
 
+> **Superseded.** This draft has been restarted as a pair of frameworks in [governance-framework/](governance-framework/README.md): a [standalone edition](governance-framework/issuer-trust-registry-governance-framework.md) and an [Ayra-layered edition](governance-framework/ayra-layered-issuer-trust-registry-GF-v0.1.md). It is kept here as source material. Prefer the new pair for current work.
+
 Status: Working draft for GDC Trust Registry Task Force discussion
 
 Event target: GDC 2026, Geneva, September 2026
@@ -18,7 +20,7 @@ New to this? Start with [Start Here: Issuer Trust Registries](start-here-issuer-
 
 This paper is an early draft that explores the structure of a governance framework that will be derived from. It is still a shared starting point, not a specification and not a finished answer. Its job is to give the working group enough common language to test the model together.
 
-The question is simple: when someone sees a verifiable digital credential (hereafter, credential), how can they check who issued it, what that issuer is recognized to issue, and whether the answer is still current?
+The question is simple: when someone sees a verifiable digital credential (hereafter, credential), how can they check who issued it, what that issuer is authorized to issue, and whether the answer is still current?
 
 The starting slice and its boundaries are set in the [Scope](#scope) section below. Topics deliberately parked — other issuer types, relying-party governance, wallet governance, registry-of-registries governance, and detailed data-model work — live in [Later Phases](https://github.com/ayraforum/gdc-trtf-onboarding-and-governance/blob/main/later-phases/README.md). They matter, but they are not where this first collaboration starts.
 
@@ -28,14 +30,14 @@ This framework is worked within the boundaries of the track's [draft scope state
 
 ## Shared Vocabulary
 
-Working definitions for the terms the scope depends on. These are starting points for the group to test, not settled meanings.
+The complete working term list is maintained in the track's [scope statement](SCOPE-Track1.md#policy-taxonomy--scope). The definitions below are the subset used most often in this framework. They are starting points for the group to test, not settled meanings.
 
 - **Verifiable digital credential (hereafter, credential).** A digitally signed set of claims made by an issuer about a subject, whose signature, issuer, and status can be checked.
-- **Issuer.** The entity that signs and issues a credential.
-- **Authority.** The entity whose mandate — established in law, regulation, or delegation, never by a registry — makes an issuer's credentials meaningful.
+- **Issuer.** A role an entity performs by asserting claims and issuing a digitally signed credential containing those claims.
+- **Authority.** The power under which an entity may perform an action with respect to a resource. It is established through law, regulation, or delegation, never by a registry.
 - **Trust registry.** An authoritative source of governed information about which entities are authorized to perform which actions with respect to which resources under a governance framework.
-- **Relying party.** Anyone who must decide whether to accept a credential. The trust decision is always theirs; a registry informs it, never makes it.
-- **Recognized vs. vetted.** A sovereign issuer is recorded, not approved: recognized. A delegated issuer may be assessed by a registrar under published rules: vetted. The same registry data may support both, but the governance meaning is not the same.
+- **Relying party.** A party that uses claims, credentials, or other governed or verifiable information to make a trust decision. The trust decision is always theirs; a registry informs it, never makes it.
+- **Recorded vs. vetted.** A sovereign issuer is recorded, not approved. A delegated issuer may be assessed by a registrar under published rules: vetted. The same registry data may support both, but the governance meaning is not the same.
 
 ## Authority Options
 
@@ -45,7 +47,7 @@ An authority has at least three options for exposing its trust information, and 
 - **Designate or participate in a shared registry service.** The authority supplies its information to a service operated on its behalf — as member states do with ICAO PKD, North American MDL issuers do with AAMVA, or EU member states do with the EU Trust Lists. The operator provides the plumbing; the authority remains the authority. Onboarding should be simple and welcoming — a service arrangement, never an application to be judged.
 - **Point to its basis of authority.** The authority signals how it holds its authority — for example, by referencing the legislation it operates under — rather than proving eligibility to anyone.
 
-Delegated issuers follow a different path: a registrar may assess evidence and approve or reject participation under published rules. That vetted path can share registry data with the recognized paths above, but the two must never be confused.
+Delegated issuers follow a different path: a registrar may assess evidence and approve or reject participation under published rules. That vetted path can use the same registry data as the sovereign recording paths above.
 
 ## Governance Meaning and Availability
 
@@ -61,9 +63,9 @@ It also does not make the trust decision. Registry answers are evidence inputs, 
 
 The basic loop has four parts:
 
-1. **Get in.** An issuer is recognized in the registry. For a government, that means declaring what it issues, while its signing keys or other trust signals are listed or made discoverable. Recorded, not approved.
+1. **Get in.** An issuer is listed in the registry. For a government, that means declaring what it issues, while its signing keys or other trust signals are listed or made discoverable. Recorded, not approved.
 2. **Stay current.** The registry keeps the issuer's information current, including whether the issuer, key, credential type, or status service is active, suspended, revoked, expired, or otherwise no longer usable.
-3. **Check.** Before making the trust decision, a relying party can use current trust information to confirm that the issuer is recognized, the credential or claim is in scope, and the technical signal belongs to that issuer. The information may have been obtained in advance or in the context of the transaction.
+3. **Check.** Before making the trust decision, a relying party can use current trust information to confirm that the issuer is listed and authorized for the credential or claim in scope, the credential or claim is in scope, and the technical signal belongs to that issuer. The information may have been obtained in advance or in the context of the transaction.
 4. **Obtain the relevant trust information.** The relying party needs a dependable way to identify the appropriate registry or authority source. Depending on the ecosystem, that information may be obtained or synchronized in advance, indicated by the credential or transaction context, or discovered through another trusted source.
 
 Trust lists such as the ICAO Public Key Directory provide one established implementation of this underlying trust pattern. The v0.1 work is about making the pattern clear enough to test across government-issued identity credentials, not about solving every registry model at once.
@@ -76,7 +78,7 @@ A government's authority to issue passports, national IDs, civil-status document
 
 The registry's job is narrower. It can help answer whether this is really the government authority, what that authority says it issues, where the governance basis can be found, and whether the relevant information is current. It must not become a verdict on whether a sovereign is allowed to issue under its own law.
 
-Put simply: a government is recognized and made discoverable through the registry. It is never vetted or approved by it.
+Put simply: a government issuer is recorded and made discoverable through the registry. It is never vetted or approved by it.
 
 For delegated or registrar-governed issuers, the process can be different. A registrar may assess evidence and approve or reject participation under published rules. The same registry data may support both models, but the governance meaning is not the same.
 
@@ -116,7 +118,7 @@ For sovereign-operated or sovereign-designated registries, the governance answer
 
 This is the small set of questions the v0.1 paper exists to work through together. None of them is settled. The starting points below are just a place to begin, so the group has something concrete to test and improve.
 
-1. **Recognized vs. vetted.** *Starting point:* keep sovereign recognition and delegated registrar vetting clearly distinct in process. *Still open:* should the registry data also distinguish the two, and if so, how do we do that without ranking or second-guessing sovereign issuers?
+1. **Recorded vs. vetted.** *Starting point:* keep sovereign recording and delegated registrar vetting clearly distinct in process. *Still open:* should the registry data also distinguish the two, and if so, how do we do that without ranking or second-guessing sovereign issuers?
 2. **Who runs the registry, and who's accountable.** *Starting point:* a sovereign can operate or designate its own registry; industry or delegated models can also exist; the cross-ecosystem layer should discover and point to those sources rather than govern them. *Still open:* when is a registry authoritative, when is it expressing authority from somewhere else, and who is responsible for its operation?
 3. **What happens when a check fails.** *Starting point:* agree baseline handling for a few clear failures, such as unknown issuer, suspended issuer, or credential out of scope. *Still open:* which failures should mean refusal, a warning, cached reliance, or an ecosystem-specific policy call?
 4. **Freshness and outages.** *Starting point:* the ecosystem sets the freshness requirement, with cached data allowed within limits when a registry is briefly unavailable. *Still open:* how current must issuer, credential, claim, key, endpoint, and status-service information be for real border, travel, and relying-party workflows?
