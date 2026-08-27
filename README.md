@@ -6,6 +6,10 @@ Trust Registries task force workspace for Global Digital Collaboration
 
 See [Track 1 README](./Track1/README-Track1.md).
 
+## Track 2 - Cross-Border mDL Trust Framework
+
+Session details: [The Trust Gap No Standard Can Close — AAMVA, Austroads, and the Governance of Cross-Border mDLs](./Track2/session-day2-the-trust-gap-no-standard-can-close.md) (Day 2, 10:00 – 10:50, Beta).
+
 
 
 ## To Consider
