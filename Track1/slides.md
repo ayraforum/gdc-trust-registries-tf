@@ -44,7 +44,7 @@ By the time the panel starts, the audience should be able to say one sentence:
 Two rules for the moderator:
 
 1. **Teach the gap, not the technology.** Do not open by explaining trust registries. Establish the missing answer, then let the panelists show it is missing in their domain too.
-2. **The lineup carries the thesis.** A moderator's comparison table is a claim. FIDO, OfDIA, and UN/CEFACT describing the same missing answer twenty minutes apart is evidence. Keep the projected material thin and let the panel supply the domain detail.
+2. **The lineup carries the thesis.** A moderator's comparison table is a claim. FIDO, OfDIA, GS1, and Registradores describing the same missing answer twenty minutes apart is evidence. Keep the projected material thin and let the panel supply the domain detail.
 3. **Use Track 2's session as the room's shared worked example.** Do not re-derive it.
 
 ### Track 2, same day, 10:00 – 10:50, Beta
@@ -224,11 +224,13 @@ This is the access-pattern neutrality test in [SCOPE-Track1.md](SCOPE-Track1.md)
 
 ## Panel questions
 
-Each question names a problem and asks toward the part of it a trust registry can address. Two standing rules:
+Each question names a problem and asks toward the part of it a trust registry can address. Three standing rules:
 
 **Ask for facts, not confirmation.** Do not state where the information lives or how bad it is before the panelist speaks. Ask where it lives, how it is maintained, and what breaks.
 
 **A "no" is the most valuable answer available.** If a panelist says the problem does not exist in their domain, that is evidence about the thesis. Follow it rather than recovering from it.
+
+**Four seats, not three.** Round 1 is now 16 minutes, not 15. Round 2 drops from three exchanges to two. Do not try to keep everything.
 
 ### The panel
 
@@ -236,17 +238,25 @@ Each question names a problem and asks toward the part of it a trust registry ca
 | --- | --- | --- |
 | Nishant Kaushik | CTO, FIDO Alliance | Verifier scale — a governed list already consumed by an enormous number of relying parties |
 | Michael Animashaun | UK Office for Digital Identities and Attributes (OfDIA) | A live national register, run by government, listing providers vetted against published criteria |
-| Steve Capell | Vice Chair, UN/CEFACT | Business and supply chain — delegated authority in chains, with no sovereign at the centre |
+| Phil Archer | GS1 | Global federated identifier authority, delegated through national bodies, operating without statute |
+| Alina Nica Gales | Registradores de España | Registries whose entries carry legal effect — business registration, land title — run as a public function |
 
-**The spine of this panel is *who governs the registry*.** A global industry consortium. A national government body. A multilateral process with no centre at all. Three different answers to the same question, all of them operating. If the same gap shows up in all three, the thesis is carried by the lineup rather than by the moderator.
+**The spine of this panel is *who governs the registry*, and *what its answer is worth*.** Four different answers, all of them operating:
 
-**What the OfDIA seat changes.** It puts the **vetted** path on stage in a way the previous lineup could not: providers apply, are assessed against published criteria, and are listed by a government body. That is the exact counterpart to a sovereign that never applies and proves nothing — and it makes the recorded-versus-vetted question, one of the track's live decisions, something the panel can actually work rather than something the moderator asserts.
+- **FIDO** — a global industry consortium, governing by membership and certification.
+- **OfDIA** — a national government body, governing by published criteria and assessment.
+- **GS1** — a global federation delegating identifier authority through national member organizations, with no statute behind it and roughly fifty years of operation.
+- **Registradores** — a public function, where a register entry is not information a relying party may use but a fact with legal consequence attached.
 
-**The gap that remains — say it, don't hide it.** There is still no sovereign issuer of foundational identity documents on this panel. OfDIA governs a register; it is not a passport authority being listed. The slide 6 sovereignty position stays the moderator's to carry. If a state issuer is in the room, pull them in during Q&A.
+If the same gap shows up in all four, the thesis is carried by the lineup rather than by the moderator.
 
-### Round 1 — Does the problem exist in your domain? (~5 min each)
+**What this lineup is unusually good at.** Two live Track 1 decisions can actually be worked here rather than asserted: **recorded versus vetted** (OfDIA's applicants against Spain's law-derived entries) and **what a registry's answer is worth** (a metadata list, a certification, and a legally effective entry, on one stage).
 
-Follows slides 1–3. Goal: three independent accounts, in their own language, of the same missing answer.
+**The gap that remains — say it, don't hide it.** No sovereign issuer of foundational identity documents is on this panel. OfDIA governs a register; Registradores exercises a delegated public function. Neither is a passport authority being listed. The slide 6 sovereignty position stays the moderator's to carry. If a state issuer is in the room, pull them in during Q&A.
+
+### Round 1 — Does the problem exist in your domain? (~4 min each)
+
+Follows slides 1–3. Goal: four independent accounts, in their own language, of the same missing answer. Hold the time — four seats at five minutes eats round 2.
 
 **Nishant Kaushik — FIDO Alliance**
 
@@ -264,57 +274,101 @@ Follow-up, and this is the one to protect time for:
 
 > What happens when the party who wants to rely on it is outside the UK, and has no relationship with the UK framework at all?
 
-**Steve Capell — UN/CEFACT**
+**Phil Archer — GS1**
 
-> In trade there is often no sovereign at the centre. Authority runs through a chain — an accreditation body stands behind a conformity assessment body, which stands behind the claim attached to a shipment — and the party relying on it may be several steps and several months removed. What does that relying party need to be able to follow, how far back does it need to go, and what is missing today?
+> You work on both sides of something this group keeps running into. In the UN work, a claim attached to a shipment traces back through a chain — a certificate from a conformity assessment body, which was accredited by someone else — and there is no sovereign anywhere at the centre of it. The party relying on that claim may be several steps and several months removed. What does that party need to be able to follow, how far back does it need to go, and where does it break today?
 
-### Round 2 — Where they disagree (~15 min, pick three)
+Follow-up, and this is the half that ties to Nishant's answer:
 
-Follows slide 7. Directed exchanges, not open floor. Name who answers first and who answers second — the second answer is the one that produces the insight.
+> GS1 meanwhile issues identifiers through national organizations at a scale where assessing everyone individually is impossible. Between those two worlds — a chain you can follow, and a scale you cannot assess — what is the minimum a registry has to say about a party for the listing to be worth anything?
 
-**Shape: one list, or a graph?** *(Nishant, then Steve)*
+**Why this seat is now doing double duty.** Phil covers the accreditation-chain ground the panel lost when UN/CEFACT dropped, *and* the federated-identifier-at-scale ground. Let him choose which to lead with — both prove the thesis.
 
-> FIDO's answer is substantially one authoritative service that relying parties consume. Steve's world cannot have one — there is no body that could operate it. Both work. So what actually determines which shape a domain needs, and can one framework serve both without collapsing into the weaker of the two?
+**Alina Nica Gales — Registradores de España**
 
-**Time of check versus time of issue.** *(Steve, then Michael)*
+> Registradores brings many registries under one roof — company registration, land title, and more. Two things this group needs. First: has consolidating them actually made the digital work easier, or moved the problem somewhere else? Second, and this is the one to dwell on: tell us what an entry in your registers actually *means* legally, and what you are accountable for. Everyone else's registry here informs a decision. Does yours do something more than that — and what does that change about how you have to run it?
 
-> A trade claim may be relied on two years after it was issued, and the real question is whether the issuer was authorized *at the time it issued* — not today. At a boarding gate, "right now" is the only question that matters. Does one registry model serve both, or are these different products?
+The second half is the most valuable thing available on this panel. Everyone else's registry *informs* a decision. Hers *constitutes* a fact. Give it room.
 
-This is slide 4's *at time T* meeting reality. It is the highest-value exchange available on this panel.
+### Round 2 — Where they disagree (~12 min, pick two)
 
-**Certification versus listing.** *(Michael, then Nishant, then Steve)*
+Follows slide 7. Directed exchanges, not open floor. Name who answers first and who answers second — the second answer produces the insight. **Pick two. Two done properly beat four rushed.**
 
-> All three of you sit on top of some assessment regime, and our framework deliberately keeps two things apart: recording an entry in a registry, and an external standards-based attestation presented as evidence. What does certification buy that listing alone does not — and what does it cost to run? Would your domain accept a list with no certification behind it?
+**Recommended pair: "What is the answer worth?" and "Recorded, or vetted?"** They are the two the deliverable actually turns on, and this is the first lineup that can settle either.
 
-This is the strongest exchange available on this panel: a government register built on assessment, an industry certification programme, and a supply chain riding accreditation chains. Three different weights on the same distinction.
+**What is the answer worth?** *(Alina, then Nishant, then Michael)*
 
-**Recorded, or vetted?** *(Michael, then Steve)*
+> Our framework says the registry informs the decision and never makes it. Alina, that may not describe your registers — you have just told us what an entry means and who is accountable. At the other end, a metadata list is useful and nobody is liable. Is "informs, never decides" the right line across that whole range, or does it quietly describe only the weak end of it?
 
-> OfDIA's register lists providers who applied and were assessed. A sovereign passport authority applies to no one and proves nothing — it is listed, and it points back to its own law. One framework has to carry both. Should the data show which path an entry came from? The worry is that any such signal lets tooling quietly treat a sovereign as a lesser tier.
+This directly pressure-tests slide 4's boundary. If it survives Alina, it is solid.
 
-This is a live Track 1 decision, and this is the panel that can actually work it.
+**Recorded, or vetted?** *(Michael, then Alina)*
 
-**Negative, unknown, unavailable.** *(Michael, then Steve, then Nishant)*
+> Some entries exist because a party applied and was assessed against published criteria. Others exist because the law says so — the body applies to nobody and points back to legislation. Michael, Alina, tell us which of those your registers do, and whether you do both. One framework has to carry both. Should the data show which path an entry came from? The worry is that any such signal lets tooling quietly treat a sovereign as a lesser tier.
 
-> Three different answers: the source says no, the source has no information, and the source cannot be reached. A provider that was never on the register is not the same as a register that is down. In supply chains, "unknown" may be the normal state. Should these produce three different behaviours, and who gets to decide which?
+A live Track 1 decision, and the exact pair of seats that can work it.
+
+**Shape: one list, or a federation?** *(Nishant, then Phil)*
+
+> FIDO's answer is substantially one authoritative service that relying parties consume. GS1's is a federation — a global body, national organizations, delegated authority. Both work, at enormous scale. What actually determines which shape a domain needs, and can one framework serve both without collapsing into the weaker of the two?
+
+**Legitimacy without statute.** *(Phil, then Michael)*
+
+> Phil, what gives GS1 the standing to be the identifier authority it is — where does that authority actually come from, and what would happen if a government decided it wanted to run it instead? Michael, yours runs the other way round. Between you: where does authority to operate a registry really come from?
+
+The sharpest contrast on the panel. Use it if the room is engaged and the pair is warm.
+
+**Time of check versus time of issue.** *(Alina, then Phil)*
+
+> Alina, does your register have to answer "who owned this *on that date*," not just today — and how? Phil, a claim can be relied on years after it was issued, where the real question is whether the issuer was authorized *at the time it issued*. Does one registry model serve both the historical and the current question, or are those different products?
+
+This is slide 4's *at time T* meeting two domains that have genuinely solved it.
+
+**Certification versus listing.** *(Michael, then Nishant, then Phil)*
+
+> Our framework deliberately keeps two things apart: recording an entry in a registry, and an external standards-based attestation presented as evidence. What does certification buy that listing alone does not, and what does it cost to run? Phil — at your scale, is assessing everyone even possible? If not, does that make the listing worth less, or worth something different?
+
+**Negative, unknown, unavailable.** *(Michael, then Phil, then Alina)*
+
+> Three different answers: the source says no, the source has no information, and the source cannot be reached. A provider that was never on the register is not the same as a register that is down. At GS1's scale, "unknown" may be the normal state. Should these produce three different behaviours, and who decides which?
 
 **The verifier-scale problem.** *(Nishant, then all)*
 
-> Millions of relying parties cannot each negotiate with each authority — that does not scale, and it never has. What is the minimum a verifier must be handed for it to make its own decision without that negotiation? What is the smallest useful answer?
+> Millions of relying parties cannot each negotiate with each authority. What is the minimum a verifier must be handed to make its own decision without that negotiation? What is the smallest useful answer?
 
-**Scope precision.** *(any two)*
+**Scope precision.** *(Alina, then Phil)*
 
-> We are working toward expressing authority as an action on a resource, in a jurisdiction, at a time. In your domain, is that granular enough to be useful — or already more machinery than you would actually publish?
+> We are working toward expressing authority as an action on a resource, in a jurisdiction, at a time. Alina — is it enough to say a registrar is authoritative for land title, or does it have to be this register, this territory, these transaction types, as of this date? Phil — is it enough to know a company is a GS1 member, or does a relying party need to know which identifiers it holds, and for what? In your domain, is that granular enough to be useful, or already more machinery than you would actually publish?
 
-**Recognition across boundaries.** *(Michael, then Steve)*
+This completes the thought started in the working doc: make the granularity question concrete per seat rather than abstract.
 
-> When a credential crosses an ecosystem boundary, how does the relying party decide which foreign authority or registry to recognize? Could scoped recognition between registries replace some of the bilateral arrangements being negotiated one at a time today?
+**Recognition across boundaries.** *(Alina, then Michael)*
+
+> Your registers are relied on by people and companies well outside Spain, and there is European work on connecting registers across borders. How does a relying party decide which foreign register to recognize, and could scoped recognition between registries replace some of the arrangements negotiated one at a time today?
+
+### Reserve — sovereignty and the citizen *(hold for Michael, or for a state voice in the room)*
+
+Not scheduled. Use if the room turns to sovereignty, or if slide 6 draws a challenge the moderator should not answer alone.
+
+**What the state kept.** Standing up a register means a government deciding what it governs itself and what it lets others do. What did the UK decide it would never delegate — and is there anything you would want back?
+
+**Serving citizens the state cannot reach.** A UK citizen renting a flat abroad needs a relying party that owes the UK nothing to make sense of a UK credential. The duty to that citizen does not stop at the border, but the register's reach does. What does the state owe that citizen, and what would have to exist for a foreign relying party to use a UK answer?
+
+**The inbound mirror.** A UK relying party facing a credential from a country the UK has no arrangement with. What does the UK need before it will accept another state's answer, and who inside government decides that?
+
+**Redress.** When an entry is wrong, or a party is removed and believes it should not have been, what does a citizen or business actually do? Who answers for it? *(Alina can answer this one too, and her answer will be more concrete — legal effect implies a route of challenge.)*
+
+**Privacy.** If relying parties query a government register per transaction, the government can see where its citizens are proving themselves. What was done about that? This is the strongest available argument for deployment neutrality, and it lands far harder from a state than from the moderator.
+
+**Ranking.** Our scope refuses to rank sovereigns, but a government relying party inevitably decides which countries it honors. Where does the UK put that decision — and would you object if a registry appeared to make it for you?
+
+The trap question of the set. Ask it only if Michael is warm; his answer is the sharpest defence of the sovereignty boundary you will get all session.
 
 ### Round 3 — Force a useful closing (~4 min)
 
-One answer each. Both halves. Nishant, Michael, Steve.
+One answer each, 45 seconds, no elaboration. Nishant, Michael, Phil, Alina.
 
-> Name one thing this group could specify in the next version that would make your domain's problem smaller — and one thing we could get wrong that would make FIDO, OfDIA, or UN/CEFACT walk away.
+> Name one thing this group could specify in the next version that would make your domain's problem smaller — and one thing we could get wrong that would make FIDO, OfDIA, GS1, or Registradores walk away.
 
 Record both. The constraints are likely to be more valuable than the requested features.
 
@@ -322,13 +376,12 @@ Record both. The constraints are likely to be more valuable than the requested f
 
 The room produces these. Route them to the panel rather than answering from the chair.
 
-- *"Isn't this a new centralized authority?"* → Slide 4's boundary. Best answered by Steve, whose domain has no centre to be captured by.
-- *"Why not one global registry?"* → Slide 6, and Round 2's first exchange. Ask Michael what a single root would have to look like before a government would rely on a register it does not govern.
+- *"Isn't this a new centralized authority?"* → Slide 4's boundary. Best answered by Phil: GS1 is a global identifier authority that no government appointed, and he can speak to what keeps it from being a chokepoint.
+- *"Why not one global registry?"* → Slide 6, and Round 2's shape exchange. Ask Michael what a single root would have to look like before a government would rely on a register it does not govern.
 - *"Doesn't PKI already do this?"* → PKI establishes control of a key. It does not establish what that key holder is authorized to issue, in which jurisdiction, or whether that is still true. Nishant can say this with more authority than the moderator can.
 - *"What about revocation of the credential itself?"* → Distinct from issuer status, genuinely open in the current scope. Say so plainly rather than improvising.
-- *"Who pays for this?"* → Likely from the trade side. FIDO and OfDIA both run funded governance today; ask how each is paid for.
+- *"Who pays for this?"* → All four run funded governance today, by four different models. Do not characterize them from the chair — put it to the panel and let each say how theirs is paid for.
 
----
 
 ## Production notes
 
@@ -338,8 +391,8 @@ The room produces these. Route them to the panel rather than answering from the 
 
 **Check before this goes audience-facing.** Any specific claim about named standards or programmes — relying-party registration regimes, verifier attestation mechanisms, or what a given format or protocol does and does not carry — should be sourced and verified before it appears on a slide or in a moderator line. The argument does not depend on any of them, and an error in one hands the room a reason to discount the rest.
 
-**Still open.** Moderator, and confirmation of the format — see [session-day2-the-pattern-that-repeats.md](session-day2-the-pattern-that-repeats.md), which still lists both as to-fill. Panelists are set: Nishant Kaushik (FIDO Alliance), Michael Animashaun (UK OfDIA), Steve Capell (UN/CEFACT). Michael replaced Gabriel Marquie of IATA, who became unavailable — travel and border crossing is no longer represented on the panel, so do not build a question on it.
+**Still open.** Moderator, and confirmation of the format — see [session-day2-the-pattern-that-repeats.md](session-day2-the-pattern-that-repeats.md), which still lists both as to-fill. Panelists as of the latest change: Nishant Kaushik (FIDO Alliance), Michael Animashaun (UK OfDIA), Phil Archer (GS1), Alina Nica Gales (Registradores de España). Gabriel Marquie (IATA) and Steve Capell (UN/CEFACT) both became unavailable. **Travel and border crossing is no longer represented — do not build a question on it**, and the panel is now four seats, which is what re-timed round 1 and cut round 2 to two exchanges.
 
-**Check the FIDO and OfDIA specifics with the panelists, not from the podium.** Round 2's certification-versus-listing exchange assumes things about how FIDO's certification and metadata work in practice. Let Nishant state them. The same holds for how the UK register is assessed, maintained, and relied on — Michael's to describe, not the moderator's to assert. Neither the questions nor the slides depend on getting those details right in advance, and asserting one wrong hands the room a reason to discount the rest.
+**Check the FIDO, OfDIA, GS1, and Registradores specifics with the panelists, not from the podium.** Round 2's certification-versus-listing exchange assumes things about how FIDO's certification and metadata work in practice. Let Nishant state them. The same holds for how the UK register is assessed and maintained (Michael's to describe), how GS1 delegates identifier authority through its member organizations (Phil's), and what legal effect a Spanish register entry actually carries (Alina's). **No pre-call was possible.** Every question about GS1 and Registradores has therefore been rewritten to ask the panelist to state the facts rather than confirm the moderator's version of them. If a premise is wrong, the question still works and the correction becomes the content. Do not add specifics back in on the day. Neither the questions nor the slides depend on getting those details right in advance, and asserting one wrong hands the room a reason to discount the rest.
 
 **Confirm before relying on the Track 2 callback.** This session's own slot time is not yet fixed here. The "you saw this morning" line only works if this session runs after 10:50 and the audiences meaningfully overlap. If it runs earlier, or draws a different room, invert it — point people *to* [the Track 2 session](../Track2/session-day2-the-trust-gap-no-standard-can-close.md) as where the worked example lives, and keep slide 5's Track 2 note as a plain reference rather than a callback.
